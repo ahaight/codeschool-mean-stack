@@ -5,6 +5,19 @@
     this.products = gems;
   });
 
+  app.controller('PanelController', function(){
+  this.tab = 1;
+
+  this.selectTab = function(setTab) {
+    this.tab = setTab;
+  };
+
+  this.isSelected = function(checkTab) {
+    return this.tab === checkTab;
+  };
+
+});
+
   var gems = [
     {
       name: "Dodecahedron",
@@ -20,7 +33,7 @@
     {
       name: "Pentagonal Gem",
       price: 5.95,
-      description: "A Pentagonal Gem has a pentagon as a cross section or as a base",
+      description: "A Pentagonal Gem has a pentagon as a cross section or as a base.",
       images: [
       {
         full: "pentagonal-gem-01-full.jpg",
